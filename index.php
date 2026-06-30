@@ -37,7 +37,7 @@ if (isset($_SESSION['user_id'])) {
 
     <main class="flex-1 flex flex-col items-center justify-center text-center px-4 max-w-3xl mx-auto py-12">
         <div class="bg-emerald-50 text-[#00A14B] text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
-            <span>🏥</span> Sistem Terintegrasi Fasilitas Kesehatan
+            <span>🏥</span> Sistem Terintegrasi
         </div>
         <h1 class="text-3xl md:text-5xl font-black text-[#1C4580] tracking-tight leading-tight mb-4">
             Akses Data Medis Darurat Anda Lewat Sekali Pindai.

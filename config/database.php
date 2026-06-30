@@ -1,10 +1,16 @@
 <?php
-// config/database.php
+require_once __DIR__ . '/../vendor/autoload.php';
 
-$host = 'localhost';
-$db   = 'db_urimed';
-$user = getenv('DB_USERNAME');
-$pass = getenv('DB_PASSWORD');
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../'); 
+$dotenv->load();
+
+$host = $_ENV['DB_HOST'];
+$db   = $_ENV['DB_NAME'];
+$user = $_ENV['DB_USERNAME'];
+$pass = $_ENV['DB_PASSWORD'];
+
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -17,6 +23,7 @@ $options = [
 try {
      $pdo = new PDO($dsn, $user, $pass, $options);
 } catch (\PDOException $e) {
-     throw new \PDOException($e->getMessage(), (int)$e->getCode());
+     // Jangan tampilkan pesan error yang mengandung password ke user di browser
+     die("Koneksi database gagal. Silakan hubungi admin.");
 }
 ?>

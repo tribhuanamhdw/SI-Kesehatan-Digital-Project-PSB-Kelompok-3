@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             <div class="flex flex-col items-center mb-6">
                 <img src="assets/img/Logo UriMed.jpg" alt="Logo UriMed" class="h-12 w-12 rounded-full object-cover border border-gray-100 shadow-sm mb-2">
-                <h2 class="text-xl font-black text-[#1C4580]">Selamat Datang Kembali</h2>
+                <h2 class="text-xl font-black text-[#1C4580]">Selamat Datang</h2>
                 <p class="text-xs text-[#6C757D]">Silakan masuk untuk mengakses dashboard kesehatan Anda</p>
             </div>
 
